@@ -1,0 +1,9 @@
+﻿<Application x:Class="de.janhendrikpeters.helpdesk.toolkit.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:de.janhendrikpeters.helpdesk.toolkit"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

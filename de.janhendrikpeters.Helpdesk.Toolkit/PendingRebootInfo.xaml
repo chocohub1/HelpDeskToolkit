@@ -1,0 +1,32 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:properties="clr-namespace:de.janhendrikpeters.helpdesk.toolkit.Properties"
+        xmlns:local="clr-namespace:de.janhendrikpeters.helpdesk.toolkit"
+        xmlns:library="clr-namespace:de.janhendrikpeters.helpdesk.library;assembly=de.janhendrikpeters.helpdesk.library" x:Class="de.janhendrikpeters.helpdesk.toolkit.PendingRebootInfo"
+        mc:Ignorable="d"
+        Title="{x:Static properties:Resources.String_RebootStatus}" Height="auto" Width="Auto" SizeToContent="WidthAndHeight">
+
+    <Grid x:Name="Grid1" VerticalAlignment="Top" HorizontalAlignment="Left">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Label VerticalAlignment="Center" Grid.Row="0" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="{x:Static properties:Resources.Label_IsCcmReboot}"/>
+        <CheckBox IsEnabled="False" x:Name="IsCcmRebootCheckBox" VerticalAlignment="Center" Grid.Row="0" Margin="3" HorizontalAlignment="Left" Grid.Column="1" Content=""/>
+        <Label Content="{x:Static properties:Resources.Label_IsWuauReboot}" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
+        <CheckBox IsEnabled="False" x:Name="IsWindowsUpdateRebootCheckBox" Content="" Grid.Column="1" HorizontalAlignment="Left"  Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
+        <Label Content="{x:Static properties:Resources.Label_PendingFileRenames}" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
+        <TextBox IsReadOnly="True" x:Name="PendingFileRenamesTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="2"  VerticalAlignment="Center" Width="120"/>
+        <Label Content="{x:Static properties:Resources.Label_RebootIsPending}" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
+        <CheckBox IsEnabled="False" x:Name="RebootPendingCheckBox" Content="" Grid.Column="1" HorizontalAlignment="Left"  Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

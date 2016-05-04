@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="String_RetrieveProcesses" xml:space="preserve">
+    <value>Lade Prozesse für {0}</value>
+  </data>
+  <data name="String_RetrieveServices" xml:space="preserve">
+    <value>Lade Dienste für {0}</value>
+  </data>
+  <data name="String_RetrieveTasks" xml:space="preserve">
+    <value>Lade geplante Aufgaben für {0}</value>
+  </data>
+  <data name="String_RetrieveInstalledSoftware" xml:space="preserve">
+    <value>Lade installierte Software für {0}</value>
+  </data>
+  <data name="LabelStatusInfo_ContentStandard" xml:space="preserve">
+    <value>Warte auf Befehle...</value>
+  </data>
+  <data name="LabelRebootStatus" xml:space="preserve">
+    <value>Neustart-Status: nV</value>
+  </data>
+  <data name="LabelFilterExpression" xml:space="preserve">
+    <value>Filterausdruck</value>
+  </data>
+  <data name="ButtonKillProcesses" xml:space="preserve">
+    <value>Prozess(e) beenden</value>
+  </data>
+  <data name="ButtonStartService" xml:space="preserve">
+    <value>Dienst starten</value>
+  </data>
+  <data name="ButtonStopService" xml:space="preserve">
+    <value>Dienst beenden</value>
+  </data>
+  <data name="ButtonRestartService" xml:space="preserve">
+    <value>Dienst neu starten</value>
+  </data>
+  <data name="TabItemEventLog" xml:space="preserve">
+    <value>Ereignisanzeige</value>
+  </data>
+  <data name="TabItemInstalledSoftware" xml:space="preserve">
+    <value>Installierte Programme</value>
+  </data>
+  <data name="TabItemScheduledTask" xml:space="preserve">
+    <value>Geplante Aufgaben</value>
+  </data>
+  <data name="TabItemServices" xml:space="preserve">
+    <value>Dienste</value>
+  </data>
+  <data name="TabItemProcesses" xml:space="preserve">
+    <value>Prozesse</value>
+  </data>
+  <data name="MenuItemFile" xml:space="preserve">
+    <value>_Datei</value>
+  </data>
+  <data name="MenuItemReload" xml:space="preserve">
+    <value>_Server neu einlesen</value>
+  </data>
+  <data name="MenuItemExit" xml:space="preserve">
+    <value>_Beenden</value>
+  </data>
+  <data name="MenuItemAbout" xml:space="preserve">
+    <value>_Über</value>
+  </data>
+  <data name="ButtonStartTask" xml:space="preserve">
+    <value>Aufgabe starten</value>
+  </data>
+  <data name="ButtonStopTask" xml:space="preserve">
+    <value>Aufgabe stoppen</value>
+  </data>
+  <data name="LabelRebootStatusPending" xml:space="preserve">
+    <value>{0} Neustart ausstehend</value>
+  </data>
+  <data name="LabelRebootStatusOk" xml:space="preserve">
+    <value>{0} Kein ausstehender Neustart</value>
+  </data>
+  <data name="MenuItemShowStatusWindow" xml:space="preserve">
+    <value>Statusfenster _öffnen</value>
+  </data>
+  <data name="String_RetrieveRebootStatus" xml:space="preserve">
+    <value>Lade Neustart-Status für {0}</value>
+  </data>
+  <data name="String_RebootStatus" xml:space="preserve">
+    <value>Neustart-Status</value>
+  </data>
+  <data name="Label_IsCcmReboot" xml:space="preserve">
+    <value>Neustart wegen Component-based servicing:</value>
+  </data>
+  <data name="Label_IsWuauReboot" xml:space="preserve">
+    <value>Neustart wegen Windows-Aktualisierungen:</value>
+  </data>
+  <data name="Label_PendingFileRenames" xml:space="preserve">
+    <value>Ausstehende Datei-Umbenennungen:</value>
+  </data>
+  <data name="Label_RebootIsPending" xml:space="preserve">
+    <value>Neustart ausstehend:</value>
+  </data>
+  <data name="Error_InsufficientPermissions" xml:space="preserve">
+    <value>Sie haben nicht die nötigen Berechtigungen um diese Operation auszuführen.
+Operation: {0}, Fehlermeldung: {1}</value>
+  </data>
+  <data name="Error_GenericError" xml:space="preserve">
+    <value>Ein Fehler ist aufgetreten.
+Operation: {0}, Fehlermeldung: {1}</value>
+  </data>
+  <data name="Action_RebootStatus" xml:space="preserve">
+    <value>Neustart-Status</value>
+  </data>
+  <data name="Action_Software" xml:space="preserve">
+    <value>Installierte Software</value>
+  </data>
+  <data name="Action_Processes" xml:space="preserve">
+    <value>Prozesse</value>
+  </data>
+  <data name="Action_Tasks" xml:space="preserve">
+    <value>Aufgaben</value>
+  </data>
+  <data name="Action_Services" xml:space="preserve">
+    <value>Dienste</value>
+  </data>
+  <data name="String_AvailableMachines" xml:space="preserve">
+    <value>Verfügbare Maschinen</value>
+  </data>
+  <data name="Label_UnavailableMachines" xml:space="preserve">
+    <value>Nicht-verfügbare Maschinen</value>
+  </data>
+  <data name="String_AvailableServers" xml:space="preserve">
+    <value>Maschinen verfügbar</value>
+  </data>
+  <data name="String_Availability" xml:space="preserve">
+    <value>Verfügbarkeit</value>
+  </data>
+  <data name="Label_AvailableNotAvailable" xml:space="preserve">
+    <value>Verfügbar, Nicht verfügbar</value>
+  </data>
+  <data name="String_StatusWindow" xml:space="preserve">
+    <value>Verfügbarkeitsübersicht</value>
+  </data>
+  <data name="Error_StoreSearch" xml:space="preserve">
+    <value>Fehler bei der Filialsuche.
+</value>
+  </data>
+  <data name="Error_OUSearch" xml:space="preserve">
+    <value>Fehler bei der Suche nach Organisationseinheiten.
+</value>
+  </data>
+  <data name="String_Refresh" xml:space="preserve">
+    <value>Aktualisierung in {0}</value>
+  </data>
+  <data name="String_EnableTask" xml:space="preserve">
+    <value>Aufgabe aktivieren</value>
+  </data>
+  <data name="String_DisableTask" xml:space="preserve">
+    <value>Aufgabe deaktivieren</value>
+  </data>
+  <data name="String_RetrieveEventLogs" xml:space="preserve">
+    <value>Lade Namen der Ereignisprotokolle für {0}</value>
+  </data>
+  <data name="Action_EventLogs" xml:space="preserve">
+    <value>Ereignisanzeige</value>
+  </data>
+  <data name="String_KillProcOnMachines" xml:space="preserve">
+    <value>Prozess auf mehreren Maschinen stoppen</value>
+  </data>
+  <data name="String_ChangeServiceOnMultipleMachines" xml:space="preserve">
+    <value>Starten/neu starten/beenden eines Dienstes auf mehreren Maschinen</value>
+  </data>
+  <data name="String_EnterProcessBeforeKill" xml:space="preserve">
+    <value>Bitte einen Prozessnamen eingeben bevor versucht wird, den Prozess zu stoppen.</value>
+  </data>
+  <data name="String_Server" xml:space="preserve">
+    <value>Server</value>
+  </data>
+  <data name="String_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="String_AboutText" xml:space="preserve">
+    <value>Author: Jan-Hendrik Peters
+Version: {0}
+Kompilierungsdatum: {1}</value>
+  </data>
+  <data name="String_StartingService" xml:space="preserve">
+    <value>Starte Dienst {0}</value>
+  </data>
+  <data name="String_AllServicesStarted" xml:space="preserve">
+    <value>Alle ausgewählten Dienste gestartet</value>
+  </data>
+  <data name="String_StoppingService" xml:space="preserve">
+    <value>Stoppe Dienst {0}</value>
+  </data>
+  <data name="String_AllServicesStopped" xml:space="preserve">
+    <value>Alle ausgewählten Dienste gestoppt</value>
+  </data>
+  <data name="String_RestartingService" xml:space="preserve">
+    <value>Starte Dienst {0} neu</value>
+  </data>
+  <data name="String_AllServicesRestarted" xml:space="preserve">
+    <value>Alle ausgewählten Dienste neu gestartet</value>
+  </data>
+  <data name="String_KillingProcesses" xml:space="preserve">
+    <value>Stoppe Prozesse auf {0}</value>
+  </data>
+  <data name="String_AllProcessesKilled" xml:space="preserve">
+    <value>Alle ausgewählten Prozesse gestoppt</value>
+  </data>
+  <data name="String_AboutCaption" xml:space="preserve">
+    <value>Über</value>
+  </data>
+  <data name="String_StoppingTasks" xml:space="preserve">
+    <value>Beende {0} geplante Aufgaben.</value>
+  </data>
+  <data name="String_TaskStopError" xml:space="preserve">
+    <value>Fehler beim Beenden von geplanter Aufgabe {0}. Fehlermeldung war {1}</value>
+  </data>
+  <data name="String_TasksStopped" xml:space="preserve">
+    <value>{0} geplante Aufgaben beendet.</value>
+  </data>
+  <data name="Generic_Error" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="String_EnablingTasks" xml:space="preserve">
+    <value>Aktiviere {0} Aufgaben</value>
+  </data>
+  <data name="String_ErrorEnablingTasks" xml:space="preserve">
+    <value>Fehler beim Aktivieren von geplanter Aufgabe {0}. Fehlermeldung war {1}</value>
+  </data>
+  <data name="String_TasksEnabled" xml:space="preserve">
+    <value>{0} geplante Aufgaben aktiviert.</value>
+  </data>
+  <data name="String_DisablingTasks" xml:space="preserve">
+    <value>Deaktiviere {0} Aufgaben</value>
+  </data>
+  <data name="String_DisableTasksError" xml:space="preserve">
+    <value>Fehler beim Deaktivieren von geplanter Aufgabe {0}. Fehlermeldung war {1}</value>
+  </data>
+  <data name="String_TasksDisabled" xml:space="preserve">
+    <value>{0} geplante Aufgaben deaktiviert</value>
+  </data>
+  <data name="String_RetrievingEvents" xml:space="preserve">
+    <value>Empfange Warnungen und Fehler aus Ereignisprotokoll {0}</value>
+  </data>
+  <data name="String_EventLogsRetrieved" xml:space="preserve">
+    <value>Ereignisprotokolle von {0} empfangen</value>
+  </data>
+  <data name="String_StartingTasks" xml:space="preserve">
+    <value>Starte {0} geplante Aufgaben</value>
+  </data>
+  <data name="String_TasksStarted" xml:space="preserve">
+    <value>{0} geplante Aufgaben gestartet</value>
+  </data>
+  <data name="String_TaskStartError" xml:space="preserve">
+    <value>Fehler beim Start von geplanter Aufgabe {0}. Fehlermeldung war {1}</value>
+  </data>
+  <data name="String_ExceptionSource" xml:space="preserve">
+    <value>Quelldatei: {0}</value>
+  </data>
+  <data name="String_ExceptionMethod" xml:space="preserve">
+    <value>Methode: {0}</value>
+  </data>
+  <data name="String_ExceptionOccurrence" xml:space="preserve">
+    <value>Auftreten: Zeile {0}, Zeichen {1}</value>
+  </data>
+  <data name="String_ErrorMessageBox" xml:space="preserve">
+    <value>Ein Fehler ist aufgetreten.
+Bitte prüfen sie, ob alle Daten korrekt sind, und wiederholen sie die Aktion. Tritt der Fehler erneut auf, scheint es sich um einen schweren Fehler zu handeln. Es wird empfohlen, die Anwendung zu schließen.
+
+Fehler:
+{0}
+
+Wollen sie fortfahren?
+(Wenn sie Ja klicken, können sie mit der Arbeit fortfahren. Klicken sie Nein, wird die Anwendung geschlossen)
+
+</value>
+  </data>
+  <data name="String_AppError" xml:space="preserve">
+    <value>Anwendungsfehler</value>
+  </data>
+  <data name="MenuItemHelp" xml:space="preserve">
+    <value>Hilfe</value>
+  </data>
+  <data name="String_FunctionNotImplemented" xml:space="preserve">
+    <value>Es tut uns Leid, diese Funktion funktioniert aktuell nicht vollständig.</value>
+  </data>
+</root>

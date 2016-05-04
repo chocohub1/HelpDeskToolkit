@@ -1,0 +1,23 @@
+﻿<Window x:Class="de.janhendrikpeters.helpdesk.toolkit.StatusWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:properties="clr-namespace:de.janhendrikpeters.helpdesk.toolkit.Properties"
+        xmlns:local="clr-namespace:de.janhendrikpeters.helpdesk.toolkit"
+        xmlns:lvc="clr-namespace:LiveCharts;assembly=LiveCharts"
+        mc:Ignorable="d"
+        Title="{x:Static properties:Resources.String_StatusWindow}" SizeToContent="WidthAndHeight" Closing="Window_Closing">
+    <DockPanel>
+        <TextBlock Name="TextBlockRefresh" Height="Auto" Width="Auto" DockPanel.Dock="Top"/>
+        <lvc:PieChart LegendLocation="Right" Series="{Binding Series}" MinHeight="200" MinWidth="200">
+            <lvc:PieChart.AxisY>
+                <lvc:Axis Title="{x:Static properties:Resources.String_AvailableServers}" />
+            </lvc:PieChart.AxisY>
+            <lvc:PieChart.AxisX>
+                <lvc:Axis Title="{x:Static properties:Resources.String_Availability}"
+              Labels="OK, ERR" />
+            </lvc:PieChart.AxisX>
+        </lvc:PieChart>
+    </DockPanel>
+</Window>

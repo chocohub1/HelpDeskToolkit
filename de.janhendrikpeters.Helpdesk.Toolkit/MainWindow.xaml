@@ -1,0 +1,107 @@
+﻿<Window x:Class="de.janhendrikpeters.helpdesk.toolkit.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:properties="clr-namespace:de.janhendrikpeters.helpdesk.toolkit.Properties"
+        xmlns:local="clr-namespace:de.janhendrikpeters.helpdesk.toolkit"
+        mc:Ignorable="d"
+        Title="Help Desk Toolkit"
+        Height="auto"
+        Width="auto"
+        Closed="Window_Closed">
+    <DockPanel>
+        <Menu Name="MenuMainMenu" DockPanel.Dock="Top" Height="auto">
+            <MenuItem Header="{x:Static properties:Resources.MenuItemFile}">
+                <MenuItem Header="{x:Static properties:Resources.MenuItemReload}" Click="ButtonReloadServerList_Click"/>
+                <MenuItem Header="{x:Static properties:Resources.MenuItemShowStatusWindow}" Click="ShowStatusWindow"/>
+                <Separator />
+                <MenuItem Header="{x:Static properties:Resources.MenuItemExit}" Click="MenuItem_Click" />
+            </MenuItem>
+            <MenuItem Header="{x:Static properties:Resources.MenuItemAbout}" Click="ShowAboutWindow" />
+            <MenuItem Header="{x:Static properties:Resources.MenuItemHelp}" Click="MenuItem_OnClick"></MenuItem>
+
+            <ComboBox Name="ComboBoxLanguage" SelectionChanged="ComboBoxLanguage_SelectionChanged"></ComboBox>
+            <Button Name="ButtonKillProcessMultipleMachines" Content="{x:Static properties:Resources.String_KillProcOnMachines}" Click="ButtonKillProcessMultipleMachines_Click"></Button>
+            <Button Name="ButtonChangeServiceMultipleMachines" Content="{x:Static properties:Resources.String_ChangeServiceOnMultipleMachines}" Click="ButtonChangeServiceMultipleMachines_Click"></Button>
+        </Menu>
+        <ToolBar DockPanel.Dock="Bottom" Height="auto">
+            <Label Name="LabelStatusInfo" Foreground="Green" Content="{x:Static properties:Resources.LabelStatusInfo_ContentStandard}" MouseDoubleClick="LabelStatusInfo_MouseDoubleClick"></Label>
+            <Label Name="LabelRebootStatus" HorizontalAlignment="Right" Content="{x:Static properties:Resources.LabelRebootStatus}" MouseDoubleClick="LabelRebootStatus_MouseDoubleClick"></Label>
+        </ToolBar>
+        <Grid DockPanel.Dock="Left">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TreeView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Name="TreeViewMachines" MouseDoubleClick="ListViewMachines_MouseDoubleClick"></TreeView>
+        </Grid>
+        <TabControl Name="TabControlMain">
+            <TabItem Header="{x:Static properties:Resources.TabItemProcesses}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid Grid.Column="0" Name="DataGridProcesses"></DataGrid>
+                    <Button Grid.Column="1" Name="ButtonKillProcess" Height="auto" HorizontalAlignment="Left" VerticalAlignment="Top" Content="{x:Static properties:Resources.ButtonKillProcesses}" Click="ButtonKillProcess_Click"></Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="{x:Static properties:Resources.TabItemServices}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid Grid.Column="0"  Grid.RowSpan="3" Name="DataGridServices"></DataGrid>
+                    <StackPanel Grid.Column="1">
+                        <Button Name="ButtonStartService" Height="auto" Content="{x:Static properties:Resources.ButtonStartService}" Click="ButtonStartService_Click"></Button>
+                        <Button Name="ButtonStopService" Height="auto" Content="{x:Static properties:Resources.ButtonStopService}" Click="ButtonStopService_Click"></Button>
+                        <Button Name="ButtonRestartService" Height="auto" Content="{x:Static properties:Resources.ButtonRestartService}" Click="ButtonRestartService_Click"></Button>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="{x:Static properties:Resources.TabItemScheduledTask}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid Grid.Column="0"  Grid.RowSpan="3" Name="DataGridTasks"></DataGrid>
+                    <StackPanel Grid.Column="1">
+                        <Button Name="ButtonStartTask" Height="auto" Content="{x:Static properties:Resources.ButtonStartTask}" Click="ButtonStartTask_Click"></Button>
+                        <Button Name="ButtonStopTask" Height="auto" Content="{x:Static properties:Resources.ButtonStopTask}" Click="ButtonStopTask_Click"></Button>
+                        <Button Name="ButtonEnableTask" Height="auto" Content="{x:Static properties:Resources.String_EnableTask}" Click="ButtonEnableTask_Click"></Button>
+                        <Button Name="ButtonDisableTask" Height="auto" Content="{x:Static properties:Resources.String_DisableTask}" Click="ButtonDisableTask_Click"></Button>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="{x:Static properties:Resources.TabItemInstalledSoftware}">
+                <DataGrid Name="DataGridSoftware" />
+            </TabItem>
+            <TabItem Header="{x:Static properties:Resources.TabItemEventLog}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Name="TextBoxEventFilter" DockPanel.Dock="Top" MinWidth="150"  HorizontalAlignment="Left" VerticalAlignment="Top" KeyUp="TextBoxEventFilter_OnKeyUp"></TextBox>
+                    <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="Caution: Retrieving all events will take some time"></Label>
+                    <ListView Grid.Row="2" Grid.Column="0" Name="ListViewEventLogs" MouseDoubleClick="ListViewEventLogs_MouseDoubleClick" Width="Auto"></ListView>
+                    <DataGrid Grid.Row="2" Grid.Column="1" Name="DataGridEventLogEntries"></DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </DockPanel>
+</Window>
